@@ -1,0 +1,41 @@
+.half-height {
+    height: 90vh;
+  }
+  
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background for better readability */
+    color: #fff; /* Optional: Set text color */
+    padding: 20px; /* Optional: Add padding to the caption */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .image-container {
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 80vh;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -50%);
+     /* Background color with transparency */
+    color: white;
+    padding: 10px;
+}
+
+
+.section5{
+  height: 60vh;
+  background-color: rgb(95, 92, 92);
+  text-align: center;
+  padding: 10;
+  
+  font-weight: bold;
+
+}
