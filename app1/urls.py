@@ -9,6 +9,8 @@ urlpatterns = [
     path('about/',views.about,name='about'),
     path('news/',views.news,name='news'),
     path('donate/',views.donate,name='donate'),
+    path('signuppage/',views.signuppage,name='signuppage'),
+    path('loginpage/',views.loginpage,name='loginpage'),
 
 
 
