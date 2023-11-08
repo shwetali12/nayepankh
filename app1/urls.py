@@ -11,6 +11,7 @@ urlpatterns = [
     path('donate/',views.donate,name='donate'),
     path('signuppage/',views.signuppage,name='signuppage'),
     path('loginpage/',views.loginpage,name='loginpage'),
+    path('logout/',views.logoutpage,name='logout'),
 
 
 

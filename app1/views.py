@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from django.contrib.auth import login, authenticate# Create your views here.
+from django.contrib.auth import login, authenticate,logout # Create your views here.
 from django.contrib.auth.models import User
 def index(request):
     return render(request,"index.html")
@@ -49,4 +49,5 @@ def loginpage(request):
 
 def logoutpage(request):
     logout(request)
-    return redirect('login')
+    return redirect('loginpage')
+
