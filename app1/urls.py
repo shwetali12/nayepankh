@@ -12,6 +12,14 @@ urlpatterns = [
     path('signuppage/',views.signuppage,name='signuppage'),
     path('loginpage/',views.loginpage,name='loginpage'),
     path('logout/',views.logoutpage,name='logout'),
+    path('feedback/',views.feedback,name='feedback'),
+    path('thank_you/',views.thank_you,name='thank_you'),
+    path('community/',views.community,name='community'),
+    path('post_detail/<int:id>/',views.post_detail,name='post_detail'),
+    path('post_detail/<int:id>/comment/',views.comment, name='comment'),
+    path('create_post/',views.create_post,name='create_post'),
+
+
 
 
 

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container mt-5 pt-5">
+    <h2>hello</h2>
+    <div class="row align-items-md-stretch">
+        <form method="POST">
+            {% csrf_token %}
+            {{ post_form.as_p }}
+            <button type="submit">Create Post</button>
+        </form>
+        
+      </div>
+</div>
+{% endblock %}

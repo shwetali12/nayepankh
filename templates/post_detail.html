@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+        <div class="row mt-5 my-4 py-5">
+                <div class="col-12">
+                        <h2 class="text-success">Post: {{ post.title }}</h2>
+                        <h5 class="text-info">Content: {{ post.content}}</h5>
+                        <small>{{ post.author }}, {{ post.created_at }}</small>
+                       
+                   <hr>
+                        
+                        <form method="post" action="{% url 'comment' post.id %}">
+                                {% csrf_token %}
+                                {{ comment_form.as_p }}
+                                <button class="btn btn-dark" value="submit">submit</button>
+                        </form>
+                        <hr>
+                        <div class="my-4 mt-5">
+                        
+                                <h5 class="text-primary">Comments</h5>
+                                {% for comment in comments%}
+                                <h3>{{comment.content}}</h3>
+                                <small>
+                                 {{comment.author.username }}
+                                </small>,
+                                <small>{{ comment.created_at }}</small>
+                                <hr>
+                                {% endfor %}
+                         </div>
+                         
+                 
+                </div>
+        
+        </div>
+        
+</div>
+
+{% endblock %}
