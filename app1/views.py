@@ -1,5 +1,7 @@
 from django.shortcuts import render,redirect,get_object_or_404
 from django.contrib.auth import login, authenticate,logout # Create your views here.
+from django.contrib.auth.decorators import login_required
+
 from django.contrib.auth.models import User
 from .forms import Feedbackform
 from .forms import PostForm
@@ -72,7 +74,8 @@ def thank_you(request):
 def community(request):
     posts = Post.objects.all()
     return render(request,'community.html',{'posts':posts})
-
+    
+@login_required
 def create_post(request):
     if request.method == 'POST':
         post_form = PostForm(request.POST)
@@ -103,6 +106,7 @@ def post_detail(request, id):
 
     return render(request, 'post_detail.html', {'post': post, 'comments': comments, 'comment_form': comment_form})
 
+@login_required
 def comment(request, id):
     post = get_object_or_404(Post, pk=id)
     
